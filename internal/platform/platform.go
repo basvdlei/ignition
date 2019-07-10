@@ -33,6 +33,7 @@ import (
 	"github.com/coreos/ignition/v2/internal/providers/openstack"
 	"github.com/coreos/ignition/v2/internal/providers/packet"
 	"github.com/coreos/ignition/v2/internal/providers/qemu"
+	"github.com/coreos/ignition/v2/internal/providers/smartos"
 	"github.com/coreos/ignition/v2/internal/providers/virtualbox"
 	"github.com/coreos/ignition/v2/internal/providers/vmware"
 	"github.com/coreos/ignition/v2/internal/providers/vultr"
@@ -167,6 +168,10 @@ func init() {
 	configs.Register(Config{
 		name:  "vultr",
 		fetch: vultr.FetchConfig,
+	})
+	configs.Register(Config{
+		name:  "smartos",
+		fetch: smartos.FetchConfig,
 	})
 	configs.Register(Config{
 		name:  "zvm",

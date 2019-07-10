@@ -17,6 +17,7 @@ Ignition is currently only supported for the following platforms:
 * [QEMU] - Ignition will read its configuration from the 'opt/com.coreos/config' key on the QEMU Firmware Configuration Device (available in QEMU 2.4.0 and higher).
 * [DigitalOcean] - Ignition will read its configuration from the droplet userdata. Cloud SSH keys and network configuration are handled separately.
 * [zVM] - Ignition will read its configuration from the reader device directly. The vmur program is necessary, which requires the vmcp and vmur kernel module as prerequisite, and the corresponding z/VM virtual unit record devices (in most cases 000c as reader, 000d as punch) must be set online.
+* [SmartOS] - Ignition will read its configuration from the instance `com.coreos:user-data` metadata entry.
 
 Ignition is under active development, so this list may grow over time.
 
@@ -31,5 +32,6 @@ For most cloud providers, cloud SSH keys and custom network configuration are ha
 [QEMU]: https://www.qemu.org/
 [DigitalOcean]: https://www.digitalocean.com/products/droplets/
 [zVM]: http://www.vm.ibm.com/overview/
+[SmartOS]: https://www.joyent.com/smartos
 
 [Afterburn]: https://github.com/coreos/afterburn
